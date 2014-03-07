@@ -1,0 +1,7 @@
+Django==1.6.1
+Pillow==2.3.0
+django-grappelli==2.5.2
+django-wysiwyg-redactor==0.3.8.2
+psycopg2==2.5.2
+sorl-thumbnail==11.12
+wsgiref==0.1.2
