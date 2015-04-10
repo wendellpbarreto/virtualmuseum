@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="initial-scale=1.0 maximum-scale=1.0 user-scalable=no">
+        <!-- title -->
+        <title>{% block title %}{{ title }}{% endblock %}</title>
+        <!-- shortcut icon -->
+        <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.png">
+        <!-- meta tags -->
+        <meta name="author" content="Wendell P. Barreto (wendellp.barreto@gmail.com)">
+        <meta name="description" content="Sroaddiction">
+        <meta name="keywords" content="sroaddiction, srovício, sro, vício, silkroad, silk, servidor, servidores, server, servers, privado, private, pirata, pirate, gold, bot, kleison, freitas, brasil, rio, grande, do, norte, rn, natal, site, website, compras, vendas, jogos, games">
+        <!-- facebook tags -->
+        <meta property="og:url" content="sroaddiction.wendellpbarreto.com">
+        <meta property="og:site_name" content="Sroaddiction">
+        <meta property="og:type" content="blog">
+        <meta property="og:title" content="Sroaddiction">
+        <meta property="og:image" content="{{ STATIC_URL }}images/logo.png">
+        <meta property="og:description" content="">
+        <!-- twitter tags -->
+        <meta name="twitter:card" content="">
+        <meta name="twitter:image" content="http://placehold.it/120x120">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:creator" content="">
+        <!-- scripts -->
+        <script src="{{ STATIC_URL }}bower_components/modernizr/modernizr.js"></script>
+        <script src="{{ STATIC_URL }}bower_components/pace/pace.js"></script>
+        <!-- fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ STATIC_URL }}fonts/icomoon/style.css">
+        <!-- stylesheets::vendor -->
+
+        <link rel="stylesheet" href="{{ STATIC_URL }}bower_components/pace/themes/pace-theme-flash.css">
+        <link rel="stylesheet" href="{{ STATIC_URL }}vendor/owlcarousel/assets/owl.carousel.css" />
+        <link rel="stylesheet" href="{{ STATIC_URL }}vendor/animate/animate.css" />
+        <!-- stylesheets::main -->
+        <link rel="stylesheet" href="{{ STATIC_URL }}styles/main.css">
+    </head>
+    <body>
+        <!-- -  -   -    -     -      -      -       -        -        Header -->
+        {% block header %} {% endblock %}
+
+        <!-- -  -   -    -     -      -      -       -        -        Menu -->
+        {% block menu %} {% endblock %}
+
+        <!-- -  -   -    -     -      -      -       -        -        Container -->
+        {% block container %} {% endblock %}
+
+        <!-- -  -   -    -     -      -      -       -        -        Footer -->
+        {% block footer %} {% endblock %}
+
+        <script src="{{ STATIC_URL }}bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="{{ STATIC_URL }}bower_components/foundation/js/foundation.js"></script>
+        <script src="{{ STATIC_URL }}bower_components/classie/classie.js"></script>
+        <script src="{{ STATIC_URL }}vendor/owlcarousel/owl.carousel.min.js"></script>
+        <script src="{{ STATIC_URL }}scripts/main.min.js"></script>
+
+        <!-- Facebook Javascript SDK -->
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </body>
+</html>
+

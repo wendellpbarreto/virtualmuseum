@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    {% include 'partials/topbar.html' %}
+{% endblock %}
+
+{% block container %}
+    <div class="container">
+        <div id="carousel" class="row-full">
+            <div class="carousel__item">
+                <img src="http://placehold.it/1500x600" alt="">
+            </div>
+            <div class="carousel__item">
+                <img src="http://placehold.it/1500x600" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="menu" class="row">
+            <ul class="menu__list large-block-grid-3">
+                <li class="menu__list-item">
+                    <div class="menu__box" data-href="{{ BASE_URL }}/servers">
+                        <i class="menu__box-icon icon-shield"></i>
+                        <div class="menu__box-info">
+                            <h4 class="menu__box-info-title">Servidores</h4>
+                            <p class="menu__box-info-paragraph">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu__list-item">
+                    <div class="menu__box" data-href="{{ BASE_URL }}/servers">
+                        <i class="menu__box-icon icon-target"></i>
+                        <div class="menu__box-info">
+                            <h4 class="menu__box-info-title">Bots</h4>
+                            <p class="menu__box-info-paragraph">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu__list-item">
+                    <div class="menu__box" data-href="{{ BASE_URL }}/how-to-buy">
+                        <i class="menu__box-icon icon-coin"></i>
+                        <div class="menu__box-info">
+                            <h4 class="menu__box-info-title">Como comprar</h4>
+                            <p class="menu__box-info-paragraph">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu__list-item">
+                    <div class="menu__box" data-href="{{ BASE_URL }}/confirm-payment">
+                        <i class="menu__box-icon icon-checkmark"></i>
+                        <div class="menu__box-info">
+                            <h4 class="menu__box-info-title">Confirmar Pagamento</h4>
+                            <p class="menu__box-info-paragraph">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu__list-item">
+                    <div class="menu__box" data-href="{{ BASE_URL }}/accounts">
+                        <i class="menu__box-icon icon-credit"></i>
+                        <div class="menu__box-info">
+                            <h4 class="menu__box-info-title">Contas</h4>
+                            <p class="menu__box-info-paragraph">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu__list-item">
+                    <div class="menu__box" data-href="{{ BASE_URL }}/contact">
+                        <i class="menu__box-icon icon-mobile"></i>
+                        <div class="menu__box-info">
+                            <h4 class="menu__box-info-title">Contato</h4>
+                            <p class="menu__box-info-paragraph">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="container bg__darkestblue">
+        <section id="statistics" class="row">
+            <ul class="statistics__list large-block-grid-5">
+                <li class="statistics__list-item">
+                    <div class="statistics__box">
+                        <h1 class="statistics__box-count">24</h1>
+                        <h6 class="statistics__box-info">Servidores</h6>
+                    </div>
+                </li>
+                <li class="statistics__list-item">
+                    <div class="statistics__box">
+                        <h1 class="statistics__box-count">5</h1>
+                        <h6 class="statistics__box-info">Bots</h6>
+                    </div>
+                </li>
+                <li class="statistics__list-item">
+                    <div class="statistics__box">
+                        <h1 class="statistics__box-count">+300</h1>
+                        <h6 class="statistics__box-info">Depoimentos</h6>
+                    </div>
+                </li>
+                <li class="statistics__list-item">
+                    <div class="statistics__box">
+                        <h1 class="statistics__box-count">+10000</h1>
+                        <h6 class="statistics__box-info">Compras realizadas</h6>
+                    </div>
+                </li>
+                <li class="statistics__list-item">
+                    <div class="statistics__box">
+                        <h1 class="statistics__box-count">+5400</h1>
+                        <h6 class="statistics__box-info">Clientes satisfeitos</h6>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'partials/footer.html' %}
+{% endblock %}

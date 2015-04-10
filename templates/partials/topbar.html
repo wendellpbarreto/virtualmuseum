@@ -1,0 +1,22 @@
+<div id="topbar" class="container {% if page == 'home' %}topbar__darkestblue{% else %}topbar__white{% endif %}">
+    <div class="row">
+        <div class="large-30 columns">
+            <div class="topbar__logo-crop row">
+                <img src="http://placehold.it/100x40" alt="Logo">
+            </div>
+        </div>
+        <div class="large-70 columns">
+            <nav class="topbar__nav row">
+                <ul class="topbar__nav-list no-bullet inline-list right">
+                    <li class="topbar__nav-list-item {% if page == 'home' %}active{% endif %}" data-href="{{ BASE_URL }}/home">Início</li>
+                    <li class="topbar__nav-list-item {% if page == 'servers' %}active{% endif %}" data-href="{{ BASE_URL }}/servers">Servidores</li>
+                    <li class="topbar__nav-list-item {% if page == 'bots' %}active{% endif %}" data-href="{{ BASE_URL }}/bots">Bots</li>
+                    <li class="topbar__nav-list-item {% if page == 'how-to-buy' %}active{% endif %}" data-href="{{ BASE_URL }}/how-to-buy">Como comprar</li>
+                    <li class="topbar__nav-list-item {% if page == 'confirm-payment' %}active{% endif %}" data-href="{{ BASE_URL }}/confirm-payment">Confirmar pagamento</li>
+                    <li class="topbar__nav-list-item {% if page == 'accounts' %}active{% endif %}" data-href="{{ BASE_URL }}/accounts">Contas</li>
+                    <li class="topbar__nav-list-item {% if page == 'contact' %}active{% endif %}" data-href="{{ BASE_URL }}/contact">Contato</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,409 @@
+// Allows the use of rem-calc() or lower-bound() in your settings
+@import "../../../bower_components/foundation/scss/foundation/functions";
+
+@import "animated";
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus,
+input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus,
+input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus,
+input[type="url"]:focus, input[type="color"]:focus, textarea:focus, button:focus {
+	border: 0;
+	box-shadow: none;
+}
+
+*:focus {
+	outline:none;
+}
+
+*::-webkit-input-placeholder {
+    color: $white;
+}
+*:-moz-placeholder {
+    color: $white;
+    opacity: 1;
+}
+*::-moz-placeholder {
+    color: $white;
+    opacity: 1;
+}
+*:-ms-input-placeholder {
+    color: $white;
+}
+
+[data-href]:hover, [data-submenu]:hover {
+	transition: 0.5s;
+	// color: $light-red;
+	cursor: pointer;
+}
+
+.row-full, .img-full {
+	width: 100%;
+	&.collapse > .column,
+	&.collapse > .columns {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+}
+
+.bg__jet {
+	background-color: $jet;
+}
+
+.bg__midnight {
+	background-color: $midnight;
+}
+
+.bg__darkestblue {
+	background-color: $darkest-blue;
+}
+
+.bg__white {
+	background: $white;
+}
+
+.table-wrapper {
+	display: table;
+	vertical-align: middle;
+	height: 100%;
+	width: 100%;
+	& > div {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+.pricing-table {
+	border: 0;
+	box-shadow: -1px 1px 5px $gainsboro;
+	.title {
+		padding: 0;
+		margin: 0;
+		display: table;
+		width: 100%;
+		p {
+			text-transform: uppercase;
+			letter-spacing: rem-calc(1);
+			font-size: rem-calc(14);
+			font-weight: 400;
+			background-color: scale-color($purple, $lightness: -70%);
+			height: 58px;
+			display: table-cell;
+			width: 100%;
+			vertical-align: middle;
+			padding: 5px 10px;
+		}
+	}
+	.price {
+		color: $darkest-blue;
+		font-size: rem-calc(22);
+	}
+	.description {
+		padding: 10px;
+	}
+	.cta-button {
+		padding: 10px;
+		.button {
+			color: $darkest-blue;
+			text-transform: uppercase;
+			font-size: rem-calc(13);
+			letter-spacing: rem-calc(1);
+			font-weight: 400;
+			background-color: $vapor;
+			width: 100%;
+			margin: 0;
+			transition: 1s;
+			position: relative;
+			i {
+				color: $vapor;
+				transition: 1s;
+				position: absolute;
+				left: 25%;
+				opacity: 0;
+			}
+			&:hover {
+				background-color: scale-color($purple, $lightness: -70%);
+				color: $vapor;
+				padding-left: 50px;
+				i {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+#topbar {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+	.topbar__nav-list {
+		margin-bottom: 0;
+		.topbar__nav-list-item {
+			text-transform: uppercase;
+			font-size: rem-calc(12);
+			letter-spacing: rem-calc(1);
+			font-weight: 500;
+			line-height: rem-calc(40);
+			color: $iron;
+		}
+	}
+	&.topbar__white {
+		background-color: $white;
+		.topbar__nav-list-item.active, .topbar__nav-list-item:hover {
+			color: $darkest-blue;
+		}
+	}
+	&.topbar__darkestblue {
+		background-color: $darkest-blue;
+		.topbar__nav-list-item.active, .topbar__nav-list-item:hover {
+			color: $snow;
+		}
+	}
+}
+
+#header {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	&.header__server {
+		height: 300px;
+		background-color: $darkest-blue;
+		background-image: url(../images/bg__header2.jpg);
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: cover;
+		.header {
+			margin-top: 30px;
+		}
+		.header__icon, .header__title {
+			text-shadow: -1px 1px 1px $black;
+			font-weight: 500;
+		}
+	}
+	.header__icon, .header__title {
+		color: $vapor;
+		display: inline-block;
+	}
+	.header__title {
+		font-weight: 300;
+	}
+	.header__icon {
+		font-size: rem-calc(35);
+		line-height: 1;
+		padding-right: 5px;
+	}
+	.header__desc p {
+		color: $vapor;
+		text-transform: uppercase;
+		font-weight: 400;
+		letter-spacing: rem-calc(1);
+		text-shadow: -1px 1px 1px $black;
+		line-height: 1.3
+	}
+	.header__anchors p {
+		transition: 0.5s;
+		color: scale-color($purple, $lightness: 50%);
+		display: inline-block;
+		font-size: rem-calc(12);
+		font-weight: 400;
+		letter-spacing: rem-calc(1);
+		padding-right: 10px;
+		text-shadow: -1px 1px 1px $black;
+		text-transform: uppercase;
+		&:hover {
+			color: scale-color($purple, $lightness: 80%);
+		}
+	}
+}
+
+#menu {
+	padding-top: 100px;
+	padding-bottom: 120px;
+	.menu__box {
+		position: relative;
+		.menu__box-icon {
+			color: $blue;
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: rem-calc(30);
+			transition: 0.5s;
+			z-index: -1;
+		}
+		.menu__box-info {
+			padding-left: 50px;
+			.menu__box-info-title {
+				font-weight: 400;
+			}
+			.menu__box-info-paragraph {
+				color: $steel;
+				letter-spacing: rem-calc(1);
+			}
+		}
+
+		&:hover {
+			.menu__box-icon {
+				font-size: rem-calc(100);
+				opacity: 0.3;
+			}
+		}
+	}
+}
+
+#statistics {
+	.statistics__list-item {
+		padding-bottom: 0;
+	}
+	.statistics__box {
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		.statistics__box-count {
+			color: $purple;
+			font-weight: 600;
+		}
+		.statistics__box-info {
+			color: $vapor;
+			letter-spacing: rem-calc(1);
+			font-weight: 100;
+		}
+	}
+}
+
+.servers__container {
+	background-color: $ghost;
+}
+#servers {
+	.servers__list-item:hover .servers__box-icon {
+		opacity: 0.3;
+	}
+	.servers__header {
+		padding-top: 5px;
+		padding-bottom: 35px;
+		.servers__header-nationality {
+			letter-spacing: rem-calc(1);
+			font-weight: 600;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+	.servers__box {
+		position: relative;
+		text-align: center;
+		margin-bottom: 20px;
+		.servers__box-crop {
+			img {
+				border-radius: 50%;
+			}
+		}
+		.servers__box-name {
+			color: $charcoal;
+			font-weight: 500;
+			margin-top: 10px;
+			margin-bottom: 2px;
+			padding-bottom: 5px;
+			display: inline-block;
+			border-bottom: 1px solid $silver;
+		}
+		.servers__box-icon {
+			opacity: 0;
+			display: block;
+			top: 10%;
+			left: 0;
+			font-size: 30px;
+			position: absolute;
+			z-index: -1;
+		}
+		.servers__box-info {
+			margin-top: 0;
+			color: $jumbo;
+			font-size: rem-calc(12);
+		}
+	}
+	.servers__nationals,
+	.servers__internationals {
+		margin-top: 30px;
+		margin-bottom: 20px;
+		padding: 10px;
+
+	}
+	.servers__nationals {
+		border-right: 1px solid $smoke;
+		.servers__header {
+			.servers__header-nationality {
+				// color: $green;
+			}
+		}
+	}
+	.servers__nationals {
+	}
+}
+
+#server {
+	background-color: $ghost;
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+	.server__tabs {
+		position: relative;
+		background-color: scale-color($dark-purple, $lightness: -30%);
+		height: 65px;
+		.row {
+			position: relative;
+		}
+		.tabs {
+			box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: -20px;
+			&:after {
+				clear: both;
+				content: "";
+				position: absolute;
+				width: 100%;
+				background: $ghost;
+				height: 3px;
+				top: 85px;
+			}
+			dd {
+				width: 33.333333%;
+				z-index: 1;
+				text-align: center;
+				&.active a {
+					background-color: $ghost;
+					color: $dark-purple;
+				}
+				a {
+					background-color: scale-color($dark-purple, $lightness: -30%);
+					color: $white;
+					text-transform: uppercase;
+					font-weight: 500;
+					letter-spacing: rem-calc(1);
+					padding-top: rem-calc(30);
+					padding-bottom: rem-calc(30);
+				}
+			}
+		}
+	}
+	.server__pricetable-list-item {
+		padding: 0 rem-calc(10) rem-calc(10);
+	}
+	.server__pricetable-title {
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: rem-calc(1);
+		color: $darkest-blue;
+		// border-top: 1px solid $smoke;
+		// border-right: 1px solid $smoke;
+		// border-left: 1px solid $smoke;
+		margin-bottom: 0;
+		padding: 10px;
+	}
+	.server__pricetable-wrapper {
+		padding: 20px 10px 10px 10px;
+		// border: 1px solid $smoke;
+	}
+}
+
